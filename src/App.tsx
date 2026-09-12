@@ -117,7 +117,7 @@ function App() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => <button key={item.id} onClick={() => scrollTo(item.id)}>{item.label}</button>)}
         </nav>
-        <a className="header-cta" href="https://wa.me/918074161073" target="_blank" rel="noreferrer">
+        <a className="header-cta" href="https://wa.me/9526500070" target="_blank" rel="noreferrer">
           Get a consultation <ArrowUpRight size={15} />
         </a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>
@@ -131,30 +131,62 @@ function App() {
       </div>
 
       <main>
-        <section className="hero" id="top">
-          <div className="hero-image" />
-          <div className="hero-overlay" />
-          <div className="hero-content reveal-on-load">
-           <p className="eyebrow light">Hyderabad · Interior Design · Home Interiors</p>
+       <section className="hero" id="top">
+  <div className="hero-image" />
+  <div className="hero-overlay" />
 
-<h1>Spaces designed<br /><em>around the way</em><br />you live.</h1>
+  <div className="hero-content reveal-on-load">
+    <p className="eyebrow light">
+      Hyderabad · Interior Design · Home Interiors
+    </p>
 
-<p className="hero-copy">
-  Thoughtfully designed interiors that bring together style, comfort and functionality.
-</p>
-           <div className="hero-image" />
-              <button className="button button-light" onClick={() => scrollTo('projects')}>Explore our work <ArrowDown size={16} /></button>
-              <a className="text-link light-link" href="https://wa.me/9526500070" target="_blank" rel="noreferrer">Get a consultation <ArrowUpRight size={16} /></a>
-            </div>
-          </div>
-          <div className="scroll-cue"><span>Scroll to explore</span><ArrowDown size={16} /></div>
-          <div className="hero-index">01 <span>/</span> 04</div>
-        </section>
+    <h1>
+      Spaces designed<br />
+      <em>around the way</em><br />
+      you live.
+    </h1>
+
+    <p className="hero-copy">
+      Thoughtfully designed interiors that bring together style, comfort and functionality.
+    </p>
+
+    <div className="hero-actions">
+      <button
+        className="button button-light"
+        onClick={() => scrollTo('projects')}
+      >
+        Explore our work <ArrowDown size={16} />
+      </button>
+
+      <a
+        className="text-link light-link"
+        href="https://wa.me/9526500070"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Get a consultation <ArrowUpRight size={16} />
+      </a>
+    </div>
+  </div>
+
+  <div className="scroll-cue">
+    <span>Scroll to explore</span>
+    <ArrowDown size={16} />
+  </div>
+
+  <div className="hero-index">
+    01 <span>/</span> 04
+  </div>
+</section>
 
         <section className="about section-pad" id="about">
           <div className="section-number">01 <span>About IN SPAZIO</span></div>
           <div className="about-grid">
-            <div className="about-image-wrap image-reveal"><img src={images.partition} alt="Custom partition and wall detail by Nid Interior Designing" loading="lazy" /><span className="image-caption">A detail in the making</span></div>
+            <div className="about-image-wrap image-reveal"><img
+  src={images.detail}
+  alt="Interior design project"
+  loading="lazy"
+/><span className="image-caption">A detail in the making</span></div>
             <div className="about-copy">
               <p className="eyebrow">About IN SPAZIO</p>
               <h2>Creating spaces with purpose, character <em>and detail.</em></h2>
@@ -187,12 +219,16 @@ function App() {
         </section>
 
         <section className="philosophy section-pad">
-          <div className="philosophy-image image-reveal"><img src={images.kitchen} alt="Custom modular kitchen interior by Nid Interior Designing" loading="lazy" /><div className="image-stamp"><Sparkles size={17} /><span>Thoughtful<br />by design</span></div></div>
+          <div className="philosophy-image image-reveal"><img
+  src={images.main}
+  alt="Interior design project"
+  loading="lazy"
+/><div className="image-stamp"><Sparkles size={17} /><span>Thoughtful<br />by design</span></div></div>
           <div className="philosophy-copy"><p className="eyebrow">04 / Our approach</p><h2>Beautiful spaces should also <em>work beautifully.</em></h2><p className="body-copy">From the overall layout to the smallest detail, every element should have a purpose. Our approach combines visual character with practical functionality to create interiors that feel natural to live in.</p><div className="principles"><div><span>01</span><strong>Function</strong></div><div><span>02</span><strong>Detail</strong></div><div><span>03</span><strong>Character</strong></div></div></div>
         </section>
 
-        <section className="image-break"><img src={images.partition} alt="Interior detail" loading="lazy" /><div className="image-break-overlay" /><p>Designed for living.</p><span className="break-mark">IN SPAZIO</span></section>
-
+       <section className="image-break">
+  <img src={images.hero} alt="Interior design project" loading="lazy" />
         <section className="gallery section-pad">
           <div className="section-heading-row"><div><p className="eyebrow">05 / Project gallery</p><h2>A closer look at<br /><em>the details.</em></h2></div><div className="gallery-side"><p className="section-intro">Explore the material, light and craft behind our interiors.</p><div className="filter-row"><button className="active">All</button></div></div></div>
           <div className="gallery-grid">{projects.map((project, index) => <button className={`gallery-item gallery-${index + 1}`} key={`gallery-${index}`} onClick={() => setLightboxIndex(index)}><img src={project.image} alt={project.title} loading="lazy" /><span><Grid3X3 size={15} /> View detail</span></button>)}</div>
@@ -208,7 +244,8 @@ function App() {
 
         <section className="contact section-pad" id="contact"><div className="contact-map"><div className="map-lines" /><div className="map-pin"><Compass size={19} /></div><div className="map-label">Hyderabad<br /><span>Telangana, India</span></div></div><div className="contact-copy"><p className="eyebrow">08 / Visit us</p><h2>Let's talk about<br /><em>your space.</em></h2><p className="address">Nid Interior Designing Construction & Home Solution<br /><br />Parakkal Tower,<br />Pandikkade, Kondotty, Kerala 673638<br />India</p><a className="phone" href="tel:+9526500070">+91 95265 00070</a><div className="contact-actions"><a className="button button-dark" href="tel:+91 9526500070">Call now <ArrowUpRight size={15} /></a><a className="button button-outline" href="https://wa.me/9526500070" target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={15} /></a><a className="directions" href="https://maps.app.goo.gl/DwmiYqRW6tw3BhUr7" target="_blank" rel="noreferrer">Get directions <ChevronRight size={15} /></a></div></div></section>
 
-        <section className="final-cta"><img src={images.kitchen} alt="Nid Interior Designing kitchen project" loading="lazy" /><div className="final-overlay" /><div className="final-content"><p className="eyebrow light">IN SPAZIO Interior Designing Construction & Home Solution</p><h2>Let's create a space<br />that <em>feels like yours.</em></h2><p>Have a home or interior project in mind? Start a conversation with us.</p><a className="button button-light" href="https://wa.me/918074161073" target="_blank" rel="noreferrer">Start a conversation <ArrowUpRight size={16} /></a></div></section>
+        <section className="final-cta">
+  <img src={images.main} alt="Interior design project" loading="lazy" /><div className="final-overlay" /><div className="final-content"><p className="eyebrow light">IN SPAZIO Interior Designing Construction & Home Solution</p><h2>Let's create a space<br />that <em>feels like yours.</em></h2><p>Have a home or interior project in mind? Start a conversation with us.</p><a className="button button-light" href="https://wa.me/918074161073" target="_blank" rel="noreferrer">Start a conversation <ArrowUpRight size={16} /></a></div></section>
       </main>
 
       <footer className="footer"><div className="footer-main"><div><span className="footer-logo">IN SPAZIO</span><p>Interior Designing Construction<br />& Home Solution</p></div><div className="footer-links"><span>Explore</span>{navItems.map((item) => <button key={item.id} onClick={() => scrollTo(item.id)}>{item.label}</button>)}</div><div className="footer-links"><span>Connect</span><a href="tel:+918074161073">+91 95265 00070</a><a href="https://wa.me/9526500070" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://maps.app.goo.gl/DwmiYqRW6tw3BhUr7" target="_blank" rel="noreferrer">Google Maps</a></div></div><div className="footer-bottom"><span>© 2026 IN SPAZIO Interior Designing Construction & Home Solution</span><span>Hyderabad, Telangana</span></div></footer>
