@@ -244,15 +244,157 @@ function App() {
 
         <section className="contact section-pad" id="contact"><div className="contact-map"><div className="map-lines" /><div className="map-pin"><Compass size={19} /></div><div className="map-label">Hyderabad<br /><span>Telangana, India</span></div></div><div className="contact-copy"><p className="eyebrow">08 / Visit us</p><h2>Let's talk about<br /><em>your space.</em></h2><p className="address">Nid Interior Designing Construction & Home Solution<br /><br />Parakkal Tower,<br />Pandikkade, Kondotty, Kerala 673638<br />India</p><a className="phone" href="tel:+9526500070">+91 95265 00070</a><div className="contact-actions"><a className="button button-dark" href="tel:+91 9526500070">Call now <ArrowUpRight size={15} /></a><a className="button button-outline" href="https://wa.me/9526500070" target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={15} /></a><a className="directions" href="https://maps.app.goo.gl/DwmiYqRW6tw3BhUr7" target="_blank" rel="noreferrer">Get directions <ChevronRight size={15} /></a></div></div></section>
 
-        <section className="final-cta">
-  <img src={images.main} alt="Interior design project" loading="lazy" /><div className="final-overlay" /><div className="final-content"><p className="eyebrow light">IN SPAZIO Interior Designing Construction & Home Solution</p><h2>Let's create a space<br />that <em>feels like yours.</em></h2><p>Have a home or interior project in mind? Start a conversation with us.</p><a className="button button-light" href="https://wa.me/918074161073" target="_blank" rel="noreferrer">Start a conversation <ArrowUpRight size={16} /></a></div></section>
-      </main>
+       <section className="final-cta">
+  <img
+    src={images.main}
+    alt="Interior design project"
+    loading="lazy"
+  />
 
-      <footer className="footer"><div className="footer-main"><div><span className="footer-logo">IN SPAZIO</span><p>Interior Designing Construction<br />& Home Solution</p></div><div className="footer-links"><span>Explore</span>{navItems.map((item) => <button key={item.id} onClick={() => scrollTo(item.id)}>{item.label}</button>)}</div><div className="footer-links"><span>Connect</span><a href="tel:+918074161073">+91 95265 00070</a><a href="https://wa.me/9526500070" target="_blank" rel="noreferrer">WhatsApp</a><a href="https://maps.app.goo.gl/DwmiYqRW6tw3BhUr7" target="_blank" rel="noreferrer">Google Maps</a></div></div><div className="footer-bottom"><span>© 2026 IN SPAZIO Interior Designing Construction & Home Solution</span><span>Hyderabad, Telangana</span></div></footer>
+  <div className="final-overlay" />
 
-      {lightboxIndex !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label="Project image viewer"><button className="lightbox-close" onClick={() => setLightboxIndex(null)} aria-label="Close"><X size={23} /></button><button className="lightbox-prev" onClick={() => moveLightbox(-1)} aria-label="Previous image"><ChevronLeft size={27} /></button><div className="lightbox-image-wrap"><img src={projects[lightboxIndex].image} alt={projects[lightboxIndex].title} /><p>{projects[lightboxIndex].category} <span>·</span> {projects[lightboxIndex].title}</p></div><button className="lightbox-next" onClick={() => moveLightbox(1)} aria-label="Next image"><ChevronRight size={27} /></button><div className="lightbox-count">{String(lightboxIndex + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</div></div>}
+  <div className="final-content">
+    <p className="eyebrow light">
+      IN SPAZIO Interior Designing Construction & Home Solution
+    </p>
+
+    <h2>
+      Let's create a space<br />
+      that <em>feels like yours.</em>
+    </h2>
+
+    <p>
+      Have a home or interior project in mind? Start a conversation with us.
+    </p>
+
+    <a
+      className="button button-light"
+      href="https://wa.me/919526500070"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Start a conversation <ArrowUpRight size={16} />
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer className="footer">
+  <div className="footer-main">
+
+    <div>
+      <span className="footer-logo">IN SPAZIO</span>
+      <p>
+        Interior Designing Construction<br />
+        & Home Solution
+      </p>
     </div>
-  );
+
+    <div className="footer-links">
+      <span>Explore</span>
+
+      {navItems.map((item) => (
+        <button
+          key={item.id}
+          onClick={() => scrollTo(item.id)}
+        >
+          {item.label}
+        </button>
+      ))}
+    </div>
+
+    <div className="footer-links">
+      <span>Connect</span>
+
+      <a href="tel:+919526500070">
+        +91 95265 00070
+      </a>
+
+      <a
+        href="https://wa.me/919526500070"
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a
+        href="https://maps.app.goo.gl/DwmiYqRW6tw3BhUr7"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Google Maps
+      </a>
+    </div>
+
+  </div>
+
+  <div className="footer-bottom">
+    <span>
+      © 2026 IN SPAZIO Interior Designing Construction & Home Solution
+    </span>
+
+    <span>
+      Hyderabad, Telangana
+    </span>
+  </div>
+</footer>
+
+{lightboxIndex !== null && (
+  <div
+    className="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project image viewer"
+  >
+    <button
+      className="lightbox-close"
+      onClick={() => setLightboxIndex(null)}
+      aria-label="Close"
+    >
+      <X size={23} />
+    </button>
+
+    <button
+      className="lightbox-prev"
+      onClick={() => moveLightbox(-1)}
+      aria-label="Previous image"
+    >
+      <ChevronLeft size={27} />
+    </button>
+
+    <div className="lightbox-image-wrap">
+      <img
+        src={projects[lightboxIndex].image}
+        alt={projects[lightboxIndex].title}
+      />
+
+      <p>
+        {projects[lightboxIndex].category}
+        <span>·</span>
+        {projects[lightboxIndex].title}
+      </p>
+    </div>
+
+    <button
+      className="lightbox-next"
+      onClick={() => moveLightbox(1)}
+      aria-label="Next image"
+    >
+      <ChevronRight size={27} />
+    </button>
+
+    <div className="lightbox-count">
+      {String(lightboxIndex + 1).padStart(2, '0')}
+      {' / '}
+      {String(projects.length).padStart(2, '0')}
+    </div>
+  </div>
+)}
+
+</div>
+);
 }
 
 export default App;
